@@ -1,0 +1,13 @@
+#!/bin/bash
+#SBATCH --job-name=exmaple
+#SBATCH --nodes=1
+#SBATCH --tasks-per-node=1
+#SBATCH --cpus-per-task=1
+#SBATCH --gres=gpu:0
+#SBATCH --mem=1G
+#SBATCH --time=1:00
+#SBATCH --output=python_out/row_%a.out
+#SBATCH --error=python_err/row_%a.err
+#----------------------------------------------------
+source /mnt/research/ghassemi-lab/mohammad-ghassemi/venv/bin/activate
+python3 /mnt/research/ghassemi-lab/mohammad-ghassemi/slurm_example/python_script.py $SLURM_ARRAY_TASK_ID

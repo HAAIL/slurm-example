@@ -1,0 +1,11 @@
+/var/lib/slurmd/job22730603/slurm_script: line 12: /mnt/research/ghassemi-lab/mohammad-ghassemi/venv/bin/activate: No such file or directory
+sed: -e expression #1, char 2: invalid usage of line address 0
+Traceback (most recent call last):
+  File "/mnt/research/ghassemi-lab/mohammad-ghassemi/slurm_example/python_script.py", line 29, in <module>
+    line      = getInput(line_number)
+  File "/mnt/research/ghassemi-lab/mohammad-ghassemi/slurm_example/python_script.py", line 9, in getInput
+    line = eval(proc.communicate()[0])
+  File "<string>", line 0
+    
+    ^
+SyntaxError: unexpected EOF while parsing
